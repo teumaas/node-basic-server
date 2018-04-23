@@ -3,6 +3,8 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const person_routes = require('./routes/person_routes')
 
+const port = proccess.env.PORT || app.get('PORT');
+
 let app = express()
 
 // bodyParser zorgt dat we de body uit een request kunnen gebruiken,
@@ -43,8 +45,8 @@ app.use((err, req, res, next) => {
 	res.status(404).json(err).end()	
 })
 
-app.listen(3000, () => {
-	console.log('De server draait op port 3000')
+app.listen(port, () => {
+	console.log('De server draait op port ' + port)
 })
 
 module.exports = app
