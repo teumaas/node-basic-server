@@ -2,7 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const person_routes = require('./routes/person_routes')
-const port = process.env.PORT || app.get('PORT');
+const port = process.env.PORT || app.get('PORT')
 
 let app = express()
 
